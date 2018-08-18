@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A58B3246-C63B-4E39-B8DB-803074D18523}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>C16_Ex03_Yakir_201049475_Omer_300471430</RootNamespace>
+    <AssemblyName>C16 Ex01 Yakir 201049475 Omer 300471430</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructure\CustomEventArgs\MenuToggleItemEventArgs.cs" />
+    <Compile Include="Infrastructure\Interfaces\IStackMananger.cs" />
+    <Compile Include="Infrastructure\Managers\MenuMananger.cs" />
+    <Compile Include="Infrastructure\Managers\StackMananger.cs" />
+    <Compile Include="Infrastructure\Models\Menu\ActivatableMenuItem.cs" />
+    <Compile Include="Infrastructure\Models\Menu\Menu.cs" />
+    <Compile Include="Infrastructure\Models\Menu\MenuItem.cs" />
+    <Compile Include="Infrastructure\Models\Menu\ToggleMenuItem.cs" />
+    <Compile Include="Interfaces\ISoundManager.cs" />
+    <Compile Include="Managers\SoundManager.cs" />
+    <Compile Include="Models\Sprites\Barrier.cs" />
+    <Compile Include="Models\BarrierList.cs" />
+    <Compile Include="Models\Sprites\Bullet.cs" />
+    <Compile Include="Infrastructure\Models\CompositeDrawableComponent.cs" />
+    <Compile Include="Infrastructure\CustomEventArgs\GameComponentEventArgs.cs" />
+    <Compile Include="CustomEventArgs\GameManagerEventArgs.cs" />
+    <Compile Include="Infrastructure\Models\DrawableComparer.cs" />
+    <Compile Include="Models\Sprites\GameOverSprite.cs" />
+    <Compile Include="Models\Sprites\PlayerText.cs" />
+    <Compile Include="Screens\GameOverScreen.cs" />
+    <Compile Include="Infrastructure\Screens\GameScreen.cs" />
+    <Compile Include="Infrastructure\Interfaces\IInputManager.cs" />
+    <Compile Include="Infrastructure\Managers\CollisionsManager.cs" />
+    <Compile Include="Enums\eEnemyType.cs" />
+    <Compile Include="Models\EnemyGun.cs" />
+    <Compile Include="Models\EnemyMatrix.cs" />
+    <Compile Include="Models\Sprites\EnemySpaceShip.cs" />
+    <Compile Include="Enums\ePlayerType.cs" />
+    <Compile Include="Enums\eTeam.cs" />
+    <Compile Include="Infrastructure\Interfaces\ICollidable.cs" />
+    <Compile Include="Infrastructure\Interfaces\ICollidable2D.cs" />
+    <Compile Include="Infrastructure\Interfaces\ICollisionsManager.cs" />
+    <Compile Include="Interfaces\IPlayer.cs" />
+    <Compile Include="Interfaces\IUpdateGameManager.cs" />
+    <Compile Include="Invaders.cs" />
+    <Compile Include="Models\ScreenBackground.cs" />
+    <Compile Include="Models\Gun.cs" />
+    <Compile Include="Infrastructure\Managers\DummyInputManager.cs" />
+    <Compile Include="Infrastructure\Managers\InputManager.cs" />
+    <Compile Include="Interfaces\IGameManager.cs" />
+    <Compile Include="Infrastructure\Managers\ScreensMananger.cs" />
+    <Compile Include="Models\Sprites\MotherShip.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerGun.cs" />
+    <Compile Include="Models\Sprites\PlayerSpaceShip.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Sprites\PlayerSouls.cs" />
+    <Compile Include="Managers\GameManager.cs" />
+    <Compile Include="CustomEventArgs\ScoreChangedEventArgs.cs" />
+    <Compile Include="Screens\LevelTransitionScreen.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\PauseScreen.cs" />
+    <Compile Include="Screens\PlayScreen.cs" />
+    <Compile Include="Screens\WelcomeScreen.cs" />
+    <Compile Include="Infrastructure\Models\Sprite.cs" />
+    <Compile Include="Infrastructure\Models\Text.cs" />
+    <Compile Include="Infrastructure\Models\UpdateableComparer.cs" />
+    <Compile Include="Models\Sprites\WelcomeSprite.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Audio\SpaceInvadersAudio.xap" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Audio\Win\Sound Bank.xsb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Audio\Win\SpaceInvadersAudio.xgs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Audio\Win\Wave Bank.xwb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Audio\Xbox\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
